@@ -1,0 +1,24 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head.pug
+
+
+	head
+		+head(head.defaults)
+
+	body
+		|%=symbols=%
+
+		
+
+
+
+
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		// scripts 
+		link(rel='preload' as='script' href='./static/js/main%=hash=%%=min=%.js' defer)
+		script(src='./static/js/main%=hash=%%=min=%.js' defer)
+

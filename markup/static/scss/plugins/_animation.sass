@@ -1,0 +1,401 @@
+// animation fadeIn
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+
+@keyframes fadeOut
+	0%
+		opacity: 1
+	100%
+		opacity: 0
+
+// animation flipInX
+@keyframes flipInX
+	0%
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+		transition-timing-function: ease-in
+		opacity: 0
+	40%
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+		transition-timing-function: ease-in			
+	60%
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+		opacity: 1	
+	80% 
+		transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+	100% 
+		transform: perspective(400px)		
+
+@keyframes flipOutX
+	0%
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+	30%
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg)		
+		opacity: 1
+	100%
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+		opacity: 0
+
+
+// animation bounceOut	
+@keyframes bounceOut
+	20%
+		transform: scale3d(.9, .9, .9)
+	50%, 55%
+		transform: scale3d(1.1, 1.1, 1.1)		
+		opacity: 1
+	100%
+		transform: scale3d(.3, .3, .3)
+		opacity: 0		
+
+@keyframes bounceIn
+	0%
+		transform: scale3d(.3, .3, .3)
+		opacity: 0		
+	20%
+		transform: scale3d(1.1, 1.1, 1.1)		
+	40%
+		transform: scale3d(.9, .9, .9)
+		opacity: 1
+	60%
+		transform: scale3d(1.03, 1.03, 1.03)
+	80%
+		transform: scale3d(.97, .97, .97)
+	100%
+		transform: scale3d(1, 1, 1)
+
+
+// snake animation 
+@-webkit-keyframes shake
+  0%, 100%
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+  10%, 30%, 50%, 70%, 90%
+    -webkit-transform: translate3d(-10px, 0, 0)
+    transform: translate3d(-10px, 0, 0)
+
+  20%, 40%, 60%, 80%
+    -webkit-transform: translate3d(10px, 0, 0)
+    transform: translate3d(10px, 0, 0)
+
+@keyframes shake
+  0%, 100%
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+  10%, 30%, 50%, 70%, 90%
+    -webkit-transform: translate3d(-10px, 0, 0)
+    transform: translate3d(-10px, 0, 0)
+
+  20%, 40%, 60%, 80%
+    -webkit-transform: translate3d(10px, 0, 0)
+    transform: translate3d(10px, 0, 0)
+
+
+// animation tada 
+@-webkit-keyframes tada
+  0%
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+  10%, 20%
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+
+  30%, 50%, 70%, 90%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+  40%, 60%, 80%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+  100%
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+@keyframes tada
+  0%
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+  10%, 20%
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)
+
+  30%, 50%, 70%, 90%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+  40%, 60%, 80%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+  100%
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
+// animation slide in down 
+.slideInDown
+  -webkit-animation-name: slideInDown
+  animation-name: slideInDown
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes slideInDown
+  0%
+    -webkit-transform: translateY(-100%)
+    transform: translateY(-100%)
+    visibility: visible
+
+  100%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+@keyframes slideInDown
+  0%
+    -webkit-transform: translateY(-100%)
+    transform: translateY(-100%)
+    visibility: visible
+
+  100%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+
+// animation slide out down  
+.slideOutDown
+  -webkit-animation-name: slideOutDown
+  animation-name: slideOutDown
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes slideOutDown
+  0%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+  100%
+    visibility: hidden
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+
+@keyframes slideOutDown
+  0%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+  100%
+    visibility: hidden
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+
+
+// bounce out right 
+.bounceOutRight
+  -webkit-animation-name: bounceOutRight
+  animation-name: bounceOutRight
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes bounceOutRight
+  20%
+    opacity: 1
+    -webkit-transform: translate3d(-20px, 0, 0)
+    transform: translate3d(-20px, 0, 0)
+
+  100%
+    opacity: 0
+    -webkit-transform: translate3d(2000px, 0, 0)
+    transform: translate3d(2000px, 0, 0)
+
+@keyframes bounceOutRight
+  20%
+    opacity: 1
+    -webkit-transform: translate3d(-20px, 0, 0)
+    transform: translate3d(-20px, 0, 0)
+
+  100%
+    opacity: 0
+    -webkit-transform: translate3d(2000px, 0, 0)
+    transform: translate3d(2000px, 0, 0)
+
+
+// zoom out right 
+.zoomOutRight
+  -webkit-animation-name: zoomOutRight
+  animation-name: zoomOutRight
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes zoomOutRight
+  40%
+    opacity: 1
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0)
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0)
+
+  100%
+    opacity: 0
+    -webkit-transform: scale(0.1) translate3d(2000px, 0, 0)
+    transform: scale(0.1) translate3d(2000px, 0, 0)
+    -webkit-transform-origin: right center
+    transform-origin: right center
+
+@keyframes zoomOutRight
+  40%
+    opacity: 1
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0)
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0)
+
+  100%
+    opacity: 0
+    -webkit-transform: scale(0.1) translate3d(2000px, 0, 0)
+    transform: scale(0.1) translate3d(2000px, 0, 0)
+    -webkit-transform-origin: right center
+    transform-origin: right center
+
+
+// slide in up 
+.slideInUp
+  -webkit-animation-name: slideInUp
+  animation-name: slideInUp
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes slideInUp
+  0%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    visibility: visible
+
+  100%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+@keyframes slideInUp
+  0%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    visibility: visible
+
+  100%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+
+
+@keyframes nextLineVertical
+	0%
+		transform: translateY(-200%)
+	100% 
+		transform: translateY(200%)
+
+
+@keyframes nextLineHorizontal
+	0%
+		transform: translateX(-100%)
+	100% 
+		transform: translateX(100%)
+		
+
+
+
+// scroll 
+.scroll
+  -webkit-animation-name: scroll
+  animation-name: scroll
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes scroll
+  0%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    visibility: visible
+
+  50%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    visibility: visible
+
+  100%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+
+@keyframes scroll
+  0%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    visibility: visible
+
+  50%
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+  100%
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    visibility: visible
+
+
+// gradient 
+.gradient
+  -webkit-animation-name: gradient
+  animation-name: gradient
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+
+@keyframes gradient 
+	0% 
+		transform: rotate(0deg)
+	
+	50% 
+		// background-position: 200% 500%
+	
+	100% 
+		transform: rotate(360deg)
+	
+
+.preloader 
+	position: relative
+	z-index: 10000
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: 999
+		backdrop-filter: blur(5px)
+	&::before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 1001 
+		width: 50px
+		height: 50px
+		margin-top: -25px 
+		margin-left: -25px  
+		background: url('../img/general/icon/heart.svg') no-repeat center/cover 
+		animation: bounceIn infinite 1s

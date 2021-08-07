@@ -1,0 +1,194 @@
+@import "smart-grid"
+
+// Main setting's
+::selection
+	background-color: $acceptor
+	color: $white
+
+*
+	outline-color: $acceptor
+
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+	// height: 9000px 
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $in-m
+	background: $white
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	
+	input[type="number"] 
+		-moz-appearance: textfield
+
+	input[type="number"]:hover,
+	input[type="number"]:focus 
+		-moz-appearance: number-input
+	
+	input, textarea, select 
+		border-radius: 0
+		-webkit-border-radius: 0px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+
+	input, textarea
+		&::placeholder 
+			// color: $setting_grey_input_text
+		// &:focus:required:invalid
+		// 	border-color: $setting_red
+		// &:required:valid
+		// 	border-color: $setting_green
+
+	input[type="search"]
+		-webkit-appearance: none
+
+	button[disabled]
+		color: $setting_grey
+		background: $setting_grey_scrollbar!important
+
+ul,li,h1,h2,h3,h4,h5,h6,p
+	margin: 0
+	padding: 0
+
+ol 
+	padding-inline-start: 0
+
+li
+	list-style-type: none
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none	
+
+button 
+	border: none
+
+table 
+	border-spacing: 0px
+	border-collapse: collapse
+
+
+	
+\::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 6px
+  height: 0px
+
+\::-webkit-scrollbar-track
+  background-color: rgba($setting_grey_scrollbar, 0.35)
+  box-shadow: 0px 0px 3px rgba($setting_grey_scrollbar, 0.35) inner
+
+\::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0
+  border-radius: 5px
+  background-color: $setting_grey_scrollbar
+  box-shadow: 0px 1px 1px $setting_grey_scrollbar inset
+  background-image: url('https://yraaa.ru/_pu/24/59610063.png')
+  background-position: center
+  background-repeat: no-repeat
+
+\::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 6px
+  height: 0px
+
+\::-webkit-scrollbar
+  width: 6px			
+  height: 6px		
+	
+.hidden
+	display: none
+
+.img-center
+	display: block
+	margin: 0 auto
+	
+.printed-content
+	display: none
+
+.img-responsive	
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.container
+	+wrapper()
+	box-sizing: border-box
+	+xl-block()
+		padding-left: 10px 
+		padding-right: 10px 
+
+
+.container-fluid 
+	+wrapper-full() 
+	box-sizing: border-box
+	+xl-block()
+		padding-left: 10px 
+		padding-right: 10px 
+		
+
+.row
+	+row-flex()
+	&.row--inner
+		margin-left: -20px
+		margin-right: -20px 
+		+xl-block()
+			margin-left: -10px 
+			margin-right: -10px 
+		
+
+.row--align-baseline 
+	display: flex
+	align-items: baseline
+
+.row--align-center 
+	display: flex
+	align-items: center
+
+.row--ai-fs 
+	display: flex
+	align-items: flex-start
+
+
+.body-wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+	overflow: hidden
+	&.body-wrapper--bg-grey
+		background: $setting_grey
+	&.body-wrapper--full-height 
+		min-height: 100% 
+		height: 100% 
+		.main 
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			height: calc(100% - 95px)
+			min-height: calc(100% - 95px)
+		.header 
+			height: 75px
+		.footer 
+			height: 10px
+	&.body-wrapper--sticky
+		+from(1210px)
+			overflow: initial
