@@ -72,12 +72,12 @@ mixin head(data)
 	script.
 		(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
 
-
+	// inline critical css
 
 	// styles 
 	link(rel="preload" href="./static/css/main%=hash=%%=min=%.css" as="style")
 	link(rel="stylesheet"  href="./static/css/main%=hash=%%=min=%.css" type="text/css")
 
-	// inline critical css
+
 
 	|<!--[if lt IE 9 ]><script src="%=static=%js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->
