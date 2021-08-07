@@ -12,14 +12,14 @@ import 'core-js/es/number/is-nan';
 // import simplebar from 'simplebar';
 
 // Plugins
-import { dragfalse } from './plugins/dragfalse';
+import { draggles } from './plugins/draggles';
 
 // API
 import { apiCustomName } from './libraries/api.custom-name';
 
 
 window.addEventListener('DOMContentLoaded', e => {
- /*
+    /*
 
 			Navigation panel
 
@@ -28,13 +28,13 @@ window.addEventListener('DOMContentLoaded', e => {
 
 */
 
-		// drag links and images disabled start
-		dragfalse();
-		// drag links and images disabled end 
+    // drag links and images disabled start
+    draggles();
+    // drag links and images disabled end
 
 
     // API START
-    apiCustomName()
+    apiCustomName();
     // API END
 
 
